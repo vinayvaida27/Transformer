@@ -18,7 +18,7 @@ The focus throughout is on building **language models** that can learn from text
 - Trained neurons, layers, and MLPs using gradient descent.  
 - Visualized computation graphs to understand forward and backward passes.  
 
-We recreated the essence of frameworks like PyTorch in just a few hundred lines of code, gaining intuition about backpropagation and neural network fundamentals — the foundation for training modern **language models**.
+We recreated the essence of frameworks like PyTorch in just a few hundred lines of code, gaining intuition about backpropagation and neural network fundamentals,  the foundation for training modern **language models**.
 
 ---
 
@@ -36,7 +36,7 @@ This statistical **Natural Language Model** highlights how likelihood maximizati
 - Explored the strengths and weaknesses of bigram models.  
 - Found that while they capture local dependencies, they fail at modeling longer context.  
 
-Bigrams provide insights but struggle to generate realistic names due to limited context — showing the need for more advanced **language models**.
+Bigrams provide insights but struggle to generate realistic names due to limited context,  showing the need for more advanced **language models**.
 
 **3. MakeMore_Part-3.ipynb**  
 - Built mappings for characters to indices.  
@@ -106,7 +106,7 @@ Controlling activations and gradients is crucial for stable deep learning, and B
 
 ## Closing Note
 
-This repository is not just code but a **language modeling journey** — bridging the gap between theory and practice in deep learning.  
+This repository is not just code but a **language modeling journey**  bridging the gap between theory and practice in deep learning.  
 Every notebook ends with a clear summary, ensuring that each step builds intuition for the next step toward modern **Large Language Models**.  
 
 If you are a recruiter or collaborator, I’d love to connect and discuss how I can bring these **language modeling** skills into impactful AI projects.  
