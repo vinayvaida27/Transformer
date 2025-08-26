@@ -5,7 +5,7 @@ Welcome to my hands-on exploration of **Neural networks, transformers, and Gener
 
 This repository documents my step-by-step implementation of core deep learning concepts, from scratch micrograd engines to MLPs, and finally toward transformer-based models.  
 
----
+
 
 ## Notebook Summaries
 
