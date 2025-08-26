@@ -47,7 +47,8 @@ This statistical model demonstrates how sequence patterns are captured, forming 
 **4. MakeMore_Part-4_Neural_Network_Approach.ipynb**  
 - Re-implemented the bigram model using a single-layer neural network.  
 - Compared count-based vs neural net-based approaches.  
-- Introduced gradient descent optimization and regularization.  
+- Introduced gradient descent optimization and regularization.
+- Generated Names using single Neural Network
 
 Both count-based and neural models yield similar results, but neural networks provide flexibility for scaling to deeper architectures.
 
@@ -59,7 +60,8 @@ Both count-based and neural models yield similar results, but neural networks pr
 - Extended the bigram model into a Multi-Layer Perceptron.  
 - Used embeddings + hidden layers to capture richer context.  
 - Trained with cross-entropy loss and gradient descent.  
-- Experimented with mini-batching and learning rate schedules.  
+- Experimented with mini-batching and learning rate schedules.
+- Generated names using the MLP with a context size of 3. 
 
 MLPs improve modeling capacity but require careful initialization, optimization, and normalization to stabilize training.
 
@@ -67,7 +69,8 @@ MLPs improve modeling capacity but require careful initialization, optimization,
 - Investigated activation distributions and gradient flow.  
 - Studied how poor scaling leads to unstable training.  
 - Introduced Batch Normalization (BN) to stabilize deep models.  
-- Discussed drawbacks and alternatives like LayerNorm and GroupNorm.  
+- Discussed drawbacks and alternatives like LayerNorm and GroupNorm.
+- Generated more meaningful names after  Effective optimization
 
 Controlling activations and gradients is crucial for stable deep learning, and BN was a breakthrough that made very deep networks feasible.
 
