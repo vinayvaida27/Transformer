@@ -1,9 +1,8 @@
 # Transformer Learning Journey
 
-Welcome to my hands-on exploration of **transformers and neural networks**.  
-This repository documents my step-by-step implementation of core deep learning concepts, from scratch micrograd engines to MLPs, and finally toward transformer-based models.  
 
-The repo is heavily inspired by Andrej Karpathy’s *makemore* lectures but is structured in a way that emphasizes **learning by coding**, experimentation, and clear takeaways.  
+Welcome to my hands-on exploration of **transformers, neural networks and Generative AI**.  
+This repository documents my step-by-step implementation of core deep learning concepts, from scratch micrograd engines to MLPs, and finally toward transformer-based models.  
 
 ---
 
@@ -80,6 +79,14 @@ Controlling activations and gradients is crucial for stable deep learning, and B
 - MLPs provide richer context understanding but demand optimization tricks.  
 - Normalization layers like BN are essential for scaling deep models.  
 - The transition from bigram models to neural networks illustrates how traditional NLP connects with modern deep learning.  
+
+---
+## References
+
+- Rumelhart, Hinton, and Williams (1986). *Learning representations by back-propagating errors*. [Nature](https://www.nature.com/articles/323533a0)  
+- Bengio et al. (2003). *A Neural Probabilistic Language Model*. [JMLR](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)  
+- Ioffe & Szegedy (2015). *Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift*. [arXiv](https://arxiv.org/abs/1502.03167)  
+- Vaswani et al. (2017). *Attention Is All You Need*. [arXiv](https://arxiv.org/abs/1706.03762)  
 
 ---
 
