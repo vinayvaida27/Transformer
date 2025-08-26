@@ -1,70 +1,99 @@
 # Transformer Learning Journey
 
-This repository documents my hands-on journey in building foundational deep learning concepts from scratch, starting with basic neural networks and progressing toward more advanced models like Multi-Layer Perceptrons (MLPs). The focus is on character-level language modeling using a dataset of names, inspired by classic papers and tutorials (e.g., Bengio et al., 2003). 
+Welcome to my hands-on exploration of **transformers and neural networks**.  
+This repository documents my step-by-step implementation of core deep learning concepts, from scratch micrograd engines to MLPs, and finally toward transformer-based models.  
 
-The notebooks demonstrate key techniques such as backpropagation, gradient descent, embeddings, activations, and batch normalization. This project builds intuition for how modern AI frameworks (like PyTorch) work under the hood and sets the stage for understanding transformers.
+The repo is heavily inspired by Andrej Karpathy’s *makemore* lectures but is structured in a way that emphasizes **learning by coding**, experimentation, and clear takeaways.  
 
-Key skills showcased:
-- Implementing neural networks from scratch using Python and NumPy.
-- Statistical modeling, probability distributions, and loss functions.
-- Training models with optimization techniques like gradient descent.
-- Handling activations, gradients, and normalization for stable training.
-- Generating text (e.g., names) using trained models.
+---
 
-This repo is structured progressively across parts, making it easy to follow the evolution from simple bigram models to more complex MLPs.
+## Notebook Summaries
 
+### Part 1: Micrograd and Backpropagation
+**Notebook:** Building_Micrograd.ipynb
 
-## Notebooks Overview
+- Built a mini deep learning framework from scratch.  
+- Implemented automatic differentiation for efficient gradient computation.  
+- Trained neurons, layers, and MLPs using gradient descent.  
+- Visualized computation graphs to understand forward and backward passes.  
 
-Below is a summary of each notebook, including key steps, topics covered, and conclusions. Each notebook includes code implementations, explanations, and visualizations for clarity.
+We recreated the essence of frameworks like PyTorch in just a few hundred lines of code, gaining intuition about backpropagation and neural network fundamentals.
 
-### Part-1_Micrograd_and_Backpropagation / Building_Micrograd.ipynb
+---
 
- 
-This notebook implements a miniature deep learning framework from scratch, focusing on automatic differentiation and backpropagation. It starts with basic derivative approximations and builds up to neurons, layers, and full MLP models trained via gradient descent. Computation graphs are visualized to understand forward and backward passes.
+### Part 2: Statistical Modeling and Neural Networks
 
+**1. MakeMore_Part-1.ipynb**  
+- Built a Bigram character-level language model.  
+- Learned probabilities from character pair counts.  
+- Measured performance using negative log-likelihood (NLL).  
+- Generated new names using sampling.  
 
-### Part-2_Stats_Modeling_and_Neural_Network / MakeMore_Part-1.ipynb
+Statistical modeling with bigrams highlights how likelihood maximization relates to probability-based text generation.
 
- 
-This notebook trains a bigram character-level language model. It calculates character combination counts, normalizes them into a probability tensor, and uses this for sampling new words (e.g., names). Model quality is evaluated using negative log-likelihood loss.
+**2. MakeMore_Part-2.ipynb**  
+- Explored the strengths and weaknesses of bigram models.  
+- Found that while they capture local dependencies, they fail at modeling longer context.  
 
+Bigrams give insights but struggle to generate realistic names due to limited context.
 
-### Part-2_Stats_Modeling_and_Neural_Network / MakeMore_Part-2.ipynb
+**3. MakeMore_Part-3.ipynb**  
+- Built mappings for characters to indices.  
+- Constructed bigram probability matrices.  
+- Implemented multinomial sampling to generate names.  
 
- 
-This notebook explores the bigram model's probability distributions and visualizations, highlighting patterns in names. It discusses the model's strengths in local dependencies and limitations in longer contexts.
+This statistical model demonstrates how sequence patterns are captured, forming the foundation of modern language modeling.
 
-### Part-2_Stats_Modeling_and_Neural_Network / MakeMore_Part-3.ipynb
+**4. MakeMore_Part-4_Neural_Network_Approach.ipynb**  
+- Re-implemented the bigram model using a single-layer neural network.  
+- Compared count-based vs neural net-based approaches.  
+- Introduced gradient descent optimization and regularization.  
 
- 
-This notebook builds a bigram character-level language model for generating names. It preprocesses a dataset, creates mappings, constructs a count tensor, normalizes to probabilities, samples new names, and evaluates with negative log-likelihood.
+Both count-based and neural models yield similar results, but neural networks provide flexibility for scaling to deeper architectures.
 
+---
 
-### Part-2_Stats_Modeling_and_Neural_Network / MakeMore_Part-4_Neural_Network_Approach.ipynb
+### Part 3: Training Names Using MLP
 
- 
-This notebook compares a count-based bigram model with a neural network approach using a single layer trained via negative log-likelihood. It covers one-hot encoding, forward passes, loss calculation, gradient descent, regularization, and sampling.
+**1. MLP.ipynb**  
+- Extended the bigram model into a Multi-Layer Perceptron.  
+- Used embeddings + hidden layers to capture richer context.  
+- Trained with cross-entropy loss and gradient descent.  
+- Experimented with mini-batching and learning rate schedules.  
 
+MLPs improve modeling capacity but require careful initialization, optimization, and normalization to stabilize training.
 
-### Part-3_Training_Names_Using_MLP / MLP.ipynb
+**2. MLP Part-B: Activations, Gradients, and BatchNorm**  
+- Investigated activation distributions and gradient flow.  
+- Studied how poor scaling leads to unstable training.  
+- Introduced Batch Normalization (BN) to stabilize deep models.  
+- Discussed drawbacks and alternatives like LayerNorm and GroupNorm.  
 
- 
-This notebook extends bigram models to MLPs with embeddings and hidden layers for richer context. It uses a context window, tanh activations, cross-entropy loss, mini-batches, and learning rate scheduling.
+Controlling activations and gradients is crucial for stable deep learning, and BN was a breakthrough that made very deep networks feasible.
 
+---
 
+## Key Learnings
 
-### Part-3_Training_Names_Using_MLP / MLP_Part-B_Activations_&_Gradients,_BatchNorm.ipynb
+- Backpropagation is simply the chain rule applied systematically.  
+- Language models evolve from simple count-based methods to deep learning approaches.  
+- MLPs provide richer context understanding but demand optimization tricks.  
+- Normalization layers like BN are essential for scaling deep models.  
+- The transition from bigram models to neural networks illustrates how traditional NLP connects with modern deep learning.  
 
- 
-This notebook discusses activations, gradients, weight initialization, and normalization in deep networks. It covers Batch Normalization (BN), its implementation, running statistics, and alternatives.
+---
 
+## Next Steps
 
+- Extend MLPs into multi-layer architectures.  
+- Implement self-attention to handle longer dependencies.  
+- Progress toward building a transformer-based name generator.  
 
-## Future Work
+---
 
-This repo lays the groundwork for transformers. Next steps could include adding attention mechanisms and scaling to full transformer architectures.
+## Closing Note
 
-## Contact
+This repository is not just code but a learning journey — bridging the gap between theory and practice in deep learning.  
+Every notebook ends with a clear summary, ensuring that each step builds intuition for the next.  
 
-Feel free to reach out for discussions or collaborations! LinkedIn: [Your LinkedIn] | Email: [Your Email]
+If you are a recruiter or collaborator, I’d love to connect and discuss how I can bring these skills into impactful AI projects.  
