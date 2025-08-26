@@ -1,7 +1,7 @@
 # Large Language Model
 
 
-Welcome to my hands-on exploration of **Neural networks, transformers, and Generative AI trained on Natural Language Preprocessing (NLP)**.  
+Welcome to my hands-on exploration of **Neural networks, Transformers, and Generative AI trained on Natural Language Preprocessing (NLP)**.  
 
 This repository documents my step-by-step implementation of core deep learning concepts in NLP, from scratch micrograd engines to MLPs, and finally toward transformer-based models.  
 
