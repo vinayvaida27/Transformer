@@ -76,37 +76,86 @@ MLPs improve modeling capacity for **Natural Language Models** but require caref
 Controlling activations and gradients is crucial for stable deep learning, and BN was a breakthrough that made very deep **language models** feasible.
 
 ---
+### Part 4: WaveNet
 
-## Key Learnings
+**1. WaveNet.ipynb**  
+- Implemented a simplified version of **WaveNet**, originally designed for audio generation.  
+- Adapted it for **character-level text generation**.  
+- Used causal convolutions to ensure autoregressive behavior.  
+- Demonstrated how the model can generate sequential text character by character.  
+- Visualized the model architecture and data flow.
 
-- Backpropagation is simply the chain rule applied systematically.  
-- **Language models** evolve from simple count-based methods to advanced **Neural and Transformer-based Natural Language Models**.  
-- MLPs provide richer context understanding but demand optimization tricks.  
-- Normalization layers like BN are essential for scaling deep networks in **language modeling**.  
-- The transition from bigram models to neural networks illustrates how traditional NLP connects with modern **Large Language Models (LLMs)**.  
+WaveNet is powerful for sequential data, and its use of dilation and causal structure allows it to model long-range dependencies effectively without attention.
 
 ---
 
-## References
+### Part 5: GPT (Generative Pre-trained Transformer)
+
+**1. Generative Pre-trained Transformer Part-1.ipynb**  
+- Step 1: **Data Preprocessing** and building a **Bigram Model**.  
+- Encoded raw text data into token IDs.  
+- Implemented a basic bigram model to predict the next character using the current one.  
+- Visualized how the model learns to generate character-level text with minimal context.  
+- Highlighted the limitations of short context windows.
+
+**2. Generative Pre-trained Transformer Part-2.ipynb**  
+- Step 2: Full **Transformer Architecture** implementation.  
+- Added token + positional embeddings, multi-head self-attention, feedforward layers, and normalization.  
+- Stacked multiple transformer blocks, trained with cross-entropy loss.  
+- Generated text using the trained GPT-like model.  
+- Achieved better quality and longer coherent text generation due to longer context and attention.
+
+The Transformer architecture marks a major leap in NLP, enabling models to learn complex patterns with scalability and parallelism.
+
+---
+## Key Learnings
+
+- **Backpropagation** is just systematic application of the **chain rule**, enabling deep neural networks to learn from data.
+- **Language modeling** has evolved from:
+  - Count-based models →  
+  - Neural networks (MLPs) →  
+  - Convolutional models (WaveNet) →  
+  - Attention-based models (Transformers and GPTs).
+- **MLPs** improve contextual understanding but require careful tuning (initialization, learning rate, normalization).
+- **WaveNet** shows how causal convolutions can model sequential data effectively without attention.
+- **Transformers** revolutionized NLP by modeling long-range dependencies using **self-attention**, enabling the training of large-scale **LLMs** like GPT-3 and ChatGPT.
+- **Normalization techniques** like **BatchNorm** and **LayerNorm** are essential for stable training and scaling deep networks.
+- The journey from **bigram models** to **transformers** illustrates how traditional NLP connects with modern **Large Language Models (LLMs)** in a unified deep learning framework.
+
+---
+
+##  References
 
 - Rumelhart, Hinton, and Williams (1986). *Learning representations by back-propagating errors*. [Nature](https://www.nature.com/articles/323533a0)  
 - Bengio et al. (2003). *A Neural Probabilistic Language Model*. [JMLR](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)  
 - Ioffe & Szegedy (2015). *Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift*. [arXiv](https://arxiv.org/abs/1502.03167)  
-- Vaswani et al. (2017). *Attention Is All You Need*. [arXiv](https://arxiv.org/abs/1706.03762)  
+- Vaswani et al. (2017). *Attention Is All You Need* (Transformer Paper). [arXiv](https://arxiv.org/abs/1706.03762)  
+- Oord et al. (2016). *WaveNet: A Generative Model for Raw Audio*. [DeepMind Blog](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio)  
+- Radford et al. (2018–2020). *GPT, GPT-2, GPT-3 Papers*. [OpenAI](https://openai.com/research)
+- **Andrej Karpathy (2023)** — *Zero to Hero* series:   
+  GitHub: [karpathy/ng-video-lecture](https://github.com/karpathy/ng-video-lecture)  
+  YouTube: [Zero to Hero Playlist](https://www.youtube.com/playlist?list=PLpOqH6AE0tNkxqvZbw-QgU3DLm6TLb1rx)
 
 ---
 
-## Next Steps
+##  Closing Note
 
-- Extend MLPs into multi-layer architectures for larger **language models**.  
-- Implement self-attention to handle longer dependencies.  
-- Progress toward building a **transformer-based Large Language Model** capable of generating more realistic names and text sequences.  
+This repository is not just a collection of code, but a **language modeling learning journey** — a step-by-step path I’ve taken to understand and implement the building blocks of modern **Large Language Models (LLMs)**.
+
+Throughout this journey, I’ve:
+
+- Learned from foundational research papers (like *Attention Is All You Need*, *WaveNet*, *Neural Probabilistic Language Models*).
+- Followed and implemented the concepts from **Andrej Karpathy’s Zero to Hero** tutorials.
+- Built everything from scratch using **PyTorch**, including:
+  - Bigram models  
+  - MLPs  
+  - WaveNet  
+  - Full Transformer architectures (GPT-style)
+
+Each notebook concludes with a clear summary to reinforce intuition, and every step builds toward understanding how models like **ChatGPT** work under the hood.
 
 ---
 
-## Closing Note
+If you're a **recruiter** or **collaborator**, I’d be happy to connect and discuss how I can bring these hands-on **language modeling** skills into real-world, impactful AI projects.
 
-This repository is not just code but a **language modeling journey**  bridging the gap between theory and practice in deep learning.  
-Every notebook ends with a clear summary, ensuring that each step builds intuition for the next step toward modern **Large Language Models**.  
-
-If you are a recruiter or collaborator, I’d love to connect and discuss how I can bring these **language modeling** skills into impactful AI projects.  
+This project reflects my commitment to deep learning, my ability to learn from theory and implement it from scratch, and my passion for building **intelligent systems**.
